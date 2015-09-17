@@ -25,7 +25,7 @@ else
 	sudo yum install npm -y --enablerepo=epel
 #Turn off those damn Iptables
 	sudo chkconfig iptables off	
-	sudo iptables stop
+	sudo service iptables stop
 #Touch the bootstrap flag file...this will help the initial script understand if the bootstrap has run already
 #Could we use a variable to do this...yep...but we ain't.
 	sudo touch /home/vagrant/.bootstrap_run
