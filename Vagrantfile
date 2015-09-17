@@ -7,5 +7,6 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "bento/centos-6.7"
   config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision :shell, path: "hello_node.sh"
   config.vm.network "forwarded_port", guest: 8194, host: 8194
 end
