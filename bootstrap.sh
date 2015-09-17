@@ -23,6 +23,8 @@ else
 	sudo rpm -ivh http://epel.mirror.net.in/epel/6/i386/epel-release-6-8.noarch.rpm
 #Install npm, (node package manager) and enable teh new repo
 	sudo yum install npm -y --enablerepo=epel
+# Time to install node package "Forever" (used to keep our child process running even if it fails or goes down)
+	sudo npm install forever
 #Turn off those damn Iptables
 	sudo chkconfig iptables off	
 	sudo service iptables stop
