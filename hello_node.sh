@@ -4,7 +4,7 @@ echo "Starting a default node app on port 8194"
 
 #Start the app and fork it to the background
 
-sudo node hello_node.js &
+su vagrant -c 'node /vagrant/hello_node.js < /dev/null &'
 
 #Let 'em know its up
 
