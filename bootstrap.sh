@@ -20,11 +20,11 @@ else
 #Install Vim...cause duh.
 	sudo yum install vim -y
 #Install the Repository "EPEL" which hosts extra packages such as node, etc. 
-	sudo rpm -ivh http://epel.mirror.net.in/epel/6/i386/epel-release-6-8.noarch.rpm
+	sudo yum install epel-release -y
 #Install npm, (node package manager) and enable teh new repo
 	sudo yum install npm -y --enablerepo=epel
 # Time to install node package "Forever" (used to keep our child process running even if it fails or goes down)
-	npm install -g hubot coffee-script yo generator-hubot forever
+	sudo npm install -g hubot coffee-script yo generator-hubot forever
 #Turn off those damn Iptables
 	sudo chkconfig iptables off	
 	sudo service iptables stop
